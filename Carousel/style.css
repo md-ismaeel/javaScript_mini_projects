@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    background-color: #f8f9fa;
+    /* Light background for contrast */
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.carousel-container {
+    position: relative;
+    width: 400px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #ffffff;
+    /* White background for the carousel */
+    border-radius: 10px;
+    /* Rounded corners for the carousel */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+}
+
+.image-box {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    /* Ensure the image covers the entire area */
+}
+
+.btn {
+    width: 60px;
+    height: 40px;
+    cursor: pointer;
+    background-color: #007bff;
+    /* Bootstrap primary color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    /* Smooth transitions */
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+}
+
+.autoplay,
+.autoplayInterval {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.autoplayInput,
+.autoplayIntervalInput {
+    margin-left: 5px;
+}
+
+@media (max-width: 480px) {
+    .carousel-container {
+        width: 90%;
+        /* Make carousel responsive on small screens */
+        height: auto;
+        /* Allow height to adjust based on content */
+    }
+
+    .btn {
+        width: 50px;
+        /* Smaller buttons on mobile */
+        height: 30px;
+    }
+}
