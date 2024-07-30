@@ -10,23 +10,11 @@ let autoplayInterval = Number(autoplayIntervalInput.value);
 let autoplayId;
 
 // Array of image URLs
-const imageUrls = [
-    "Carousel\img\cat-1.jpeg",
-    "Carousel\img\cat-2.jpeg",
-    "Carousel\img\cat-3.png",
-    "Carousel\img\cat-4.png",
-    "Carousel\img\cat-5.jpg",
-    "Carousel\img\cat-6.jpg",
-    // Add more image paths as needed
-];
+const imageUrls = Array.from(images).map(img => img.src);
 
 const updateImagePosition = () => {
     imageBox.style.transform = `translateX(-${currentIndex * 100}%)`;
-    // Update the src attribute of each image based on the currentIndex
-    images.forEach((img, index) => {
-        const imgIndex = (currentIndex + index) % imageUrls.length;
-        img.src = imageUrls[imgIndex];
-    });
+    updateNavigationButtons();
 };
 
 const showNextImage = () => {
@@ -37,6 +25,12 @@ const showNextImage = () => {
 const showPrevImage = () => {
     currentIndex = (currentIndex - 1 + imageUrls.length) % imageUrls.length;
     updateImagePosition();
+};
+
+const updateNavigationButtons = () => {
+    // The buttons should always be enabled because of the infinite loop
+    prevButton.disabled = false;
+    nextButton.disabled = false;
 };
 
 prevButton.addEventListener("click", showPrevImage);
@@ -60,3 +54,13 @@ autoplayIntervalInput.addEventListener("input", () => {
 
 // Initial load
 updateImagePosition();
+
+// Start autoplay if checkbox is checked on load
+if (autoplayCheckbox.checked) {
+    autoplayId = setInterval(showNextImage, autoplayInterval);
+}
+
+// Clear interval on unload
+window.addEventListener("beforeunload", () => {
+    clearInterval(autoplayId);
+});

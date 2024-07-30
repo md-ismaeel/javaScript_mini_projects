@@ -10,15 +10,17 @@
 
 <body>
     <section class="container">
-        <div style="display: flex; justify-self: center; align-items: center; gap: 10px;">
+        <div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
             <button class="btn prev">&lt;</button>
-            <div class="carousel-container">
-
-                <div class="image-box">
-                    <img src="" alt="img" class="carousel-image">
-                    <!-- Add more images as needed -->
+            <div class="carousel-container" style="overflow: hidden; width: 300px;">
+                <div class="image-box" style="display: flex; transition: transform 0.5s;">
+                    <img src="./img/cat-1.png" alt="cat1" class="carousel-image" />
+                    <img src="./img/cat-2.jpeg" alt="cat2" class="carousel-image" />
+                    <img src="./img/cat-3.png" alt="cat3" class="carousel-image" />
+                    <img src="./img/cat-4.png" alt="cat4" class="carousel-image" />
+                    <img src="./img/cat-5.jpg" alt="cat5" class="carousel-image" />
+                    <img src="./img/cat-6.jpg" alt="cat6" class="carousel-image" />
                 </div>
-
             </div>
             <button class="btn next">&gt;</button>
         </div>
@@ -28,7 +30,7 @@
             <input type="checkbox" class="autoplayInput">
         </div>
         <div class="autoplayInterval">
-            <label for="autoplayInterval">AutoplayInterval</label>
+            <label for="autoplayInterval">Autoplay Interval (ms)</label>
             <input type="range" class="autoplayIntervalInput" min="1000" max="5000" step="500" value="2000">
         </div>
     </section>
