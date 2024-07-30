@@ -7,9 +7,90 @@
 body {
     height: auto;
     width: 100vw;
+    overflow: hidden;
 }
 
 .container {
     width: 100%;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.form {
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: #000; */
+}
+
+
+#inputEl {
+    width: 600px;
+    height: 50px;
+    border: 1.5px slategrey solid;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+#inputEl::placeholder {
+    font-size: 18px;
+}
+
+.box {
+    width: 600px;
+    height: 400px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 5px;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    /* background-color: aqua; */
+}
+
+.box::-webkit-scrollbar {
+    display: none;
+}
+
+/* Example custom scrollbar styling */
+.box::-webkit-scrollbar {
+    width: 8px;
+}
+
+.box::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
+
+.box::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+
+.item-container {
+    min-width: 20px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 20px;
+    background-color: rgb(220, 220, 220);
+    border-radius: 15px;
+    font-size: 20px;
+    border: 1px solid gray;
+}
+
+.remove-btn {
+    font-size: 16px;
+    color: red;
+    cursor: pointer;
+    padding: 5px 0px;
+    padding-left: 6px;
 }
