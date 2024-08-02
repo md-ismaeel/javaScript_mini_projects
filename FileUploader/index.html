@@ -4,16 +4,20 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Carousel</title>
+    <title>Upload images</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-
-    <section class="container">
-
-    </section>
-
+    <div class="wrapper">
+        <header>File Uploader JavaScript</header>
+        <form action="#">
+            <input id="file-input" type="file" name="file" hidden />
+            <img class="fas fa-cloud-upload-alt" src="./add_image.svg"></img>
+            <p>Browse File to Upload</p>
+        </form>
+        <section id="selected-file-area"></section>
+    </div>
     <script src="./index.js"></script>
 </body>
 
