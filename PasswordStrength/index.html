@@ -4,13 +4,32 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Carousel</title>
+    <title>Password Strength</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
 
     <section class="container">
+
+        <div>
+            <input type="text" id="password" min="8" max="32" autofocus autocomplete="off"
+                placeholder="Enter the password" />
+        </div>
+
+        <div class="flex indicators">
+            <span id="lc">Lowercase</span>
+            <span id="uc">Uppercase</span>
+            <span id="num">Number</span>
+            <span id="sym">Symbols</span>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <p id="charsP">Password has <strong id="chars">0</strong> chars</p>
+        <p id="strengthP">Your password is <strong id="strength">Weak</strong></p>
 
     </section>
 

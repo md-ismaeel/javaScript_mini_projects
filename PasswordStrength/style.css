@@ -11,5 +11,104 @@ body {
 
 .container {
     width: 100%;
+    /* min-height: 100vh; */
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* #password {
+    height: 35px;
+    width: 400px;
+    padding: 0px 10px;
+    font-size: 16px;
+} */
+
+#password::placeholder {
+    font-size: 16px;
+}
+
+#password {
+    height: 40px;
+    width: 400px;
+    font-size: 17px;
+    border: 1px solid gray;
+    padding: 0 10px;
+    outline: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#password:hover {
+    transform: scale(1);
+    border: #007bff 1.5px solid;
+}
+
+#password:focus {
+    box-shadow: 0 0 0 3px rgba(4, 110, 223, 0.5);
+}
+
+
+
+.flex {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4px;
+}
+
+.progress-container {
+    margin-top: 30px;
+    height: 10px;
+    width: 400px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+#progressBar {
+    width: 0;
     height: 100%;
+    background-color: red;
+}
+
+.indicator {
+    color: grey;
+}
+
+.indicator.active {
+    color: green;
+}
+
+#charsP,
+#strengthP {
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+
+
+.input1,
+.input2 {
+    height: 40px;
+    width: 300px;
+    font-size: 17px;
+    border: 1px solid gray;
+    padding: 0 10px;
+    outline: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.input1:hover,
+.input2:hover {
+    transform: scale(1);
+    border: #007bff 1.5px solid;
+}
+
+.input1:focus,
+.input2:focus {
+    box-shadow: 0 0 0 3px rgba(4, 110, 223, 0.5);
 }
