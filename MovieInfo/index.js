@@ -25,7 +25,7 @@ function updateUI(data) {
     title.textContent = data.Title
     genre.textContent = data.Genre
     cast.textContent = data.Actors
-    rating.textContent = ""
+    rating.textContent = data.Ratings[0].Value.slice(0,3)
     releaseDate.textContent = data.Released
     director.textContent = data.Director
     movieInfo.style.display = "flex"
