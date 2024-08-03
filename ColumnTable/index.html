@@ -4,15 +4,25 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Carousel</title>
+    <title>Column Table</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
 
-    <section class="container">
+    <div class="container text-center">
+        <section class="size">
+            <label for="rows">Rows</label>
+            <input type="range" name="rows" id="rows" min="2" max="20" value="2" />
 
-    </section>
+            <label for="columns">Columns</label>
+            <input type="range" name="columns" id="columns" min="2" max="20" value="2" />
+        </section>
+
+        <table class="table">
+            <tbody class="table-body"></tbody>
+        </table>
+    </div>
 
     <script src="./index.js"></script>
 </body>
